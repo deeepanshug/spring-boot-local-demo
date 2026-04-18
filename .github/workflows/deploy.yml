@@ -19,7 +19,7 @@ jobs:
       uses: actions/setup-java@v5
       with:
         distribution: 'temurin' # See 'Supported distributions' for available options
-        java-version: '2'
+        java-version: '21'
 
     - name: Building Jar File
       run: ./mvnw clean package -DskipTests
