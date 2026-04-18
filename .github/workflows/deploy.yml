@@ -33,7 +33,7 @@ jobs:
        password: ${{ secrets.Docker_Token }}
       
     - name: Building Docker Image
-      run: docker build -t ${{ secrets.Docker_Username }}/spring-boot-local-demo:try1
+      run: docker build -t ${{ secrets.Docker_Username }}/spring-boot-local-demo:try1 .
 
     - name: Push Image to Docker Hub
       run: docker push ${{ secrets.Docker_Username }}/spring-boot-local-demo:try1
