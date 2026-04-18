@@ -61,7 +61,7 @@ public class ProductController {
         try {
             product1 = service.updateProduct(prodId,product,imageFile);
         } catch (IOException e) {
-            return new ResponseEntity<>("Failed to update",HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Failed to update...",HttpStatus.BAD_REQUEST);
         }
         if(product1 != null) return new ResponseEntity<>("Product updated Successfully", HttpStatus.OK);
         else return new ResponseEntity<>("Failed to update",HttpStatus.BAD_REQUEST);
